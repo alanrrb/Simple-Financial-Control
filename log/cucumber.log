@@ -1,0 +1,251 @@
+# Logfile created on Sat Mar 20 15:00:24 -0300 2010  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Columns (82.2ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Create (21.0ms)[0m   [0mINSERT INTO `contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 19:22:07', NULL, '2010-03-20 19:22:07', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (8.9ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Create (0.4ms)[0m   [0mINSERT INTO `contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 19:23:22', NULL, '2010-03-20 19:23:22', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (99.1ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 19:23:22', `nome` = 'conta corrente Itau' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Update (0.3ms)[0m   [0mUPDATE `contas` SET `updated_at` = '2010-03-20 19:23:22', `descricao` = 'conta corrente no itau, agencia 3784 - c/c 29798-2' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Create (0.3ms)[0m   [0mINSERT INTO `contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 19:25:00', NULL, '2010-03-20 19:25:00', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (0.4ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 19:25:00', `nome` = 'conta corrente Itau' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Update (0.2ms)[0m   [0mUPDATE `contas` SET `updated_at` = '2010-03-20 19:25:00', `descricao` = 'conta corrente no itau, agencia 3784 - c/c 29798-2' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mConta Load (31.1ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`nome` = 'conta corrente Itau') LIMIT 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Create (0.3ms)[0m   [0mINSERT INTO `contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 19:25:15', NULL, '2010-03-20 19:25:15', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (0.3ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 19:25:15', `nome` = 'conta corrente Itau' WHERE `id` = 4[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Update (0.2ms)[0m   [0mUPDATE `contas` SET `updated_at` = '2010-03-20 19:25:15', `descricao` = 'conta corrente no itau, agencia 3784 - c/c 29798-2' WHERE `id` = 4[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`nome` = 'conta corrente Itau') LIMIT 1[0m
+  [4;36;1mSQL (19.7ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Create (0.3ms)[0m   [0mINSERT INTO `contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 19:48:07', NULL, '2010-03-20 19:48:07', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (0.3ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 19:48:07', `nome` = 'conta corrente Itau' WHERE `id` = 5[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Update (0.2ms)[0m   [0mUPDATE `contas` SET `updated_at` = '2010-03-20 19:48:07', `descricao` = 'conta corrente no itau, agencia 3784 - c/c 29798-2' WHERE `id` = 5[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`nome` = 'conta corrente Itau') LIMIT 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Create (0.3ms)[0m   [0mINSERT INTO `contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 19:48:18', NULL, '2010-03-20 19:48:18', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (0.3ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 19:48:18', `nome` = 'conta corrente Itau' WHERE `id` = 6[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Update (0.2ms)[0m   [0mUPDATE `contas` SET `updated_at` = '2010-03-20 19:48:18', `descricao` = 'conta corrente no itau, agencia 3784 - c/c 29798-2' WHERE `id` = 6[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mConta Load (0.4ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`nome` = 'conta corrente Itau') LIMIT 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Create (0.5ms)[0m   [0mINSERT INTO `contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 19:48:38', NULL, '2010-03-20 19:48:38', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (0.3ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 19:48:38', `nome` = 'conta corrente Itau' WHERE `id` = 7[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Update (0.2ms)[0m   [0mUPDATE `contas` SET `updated_at` = '2010-03-20 19:48:38', `descricao` = 'conta corrente no itau, agencia 3784 - c/c 29798-2' WHERE `id` = 7[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`nome` = 'conta corrente Itau') LIMIT 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Columns (26.0ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Create (0.3ms)[0m   [0mINSERT INTO `contas` (`tipo_conta_id`, `created_at`, `nome`, `updated_at`, `descricao`) VALUES(NULL, '2010-03-20 20:16:37', NULL, '2010-03-20 20:16:37', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Create (0.3ms)[0m   [0mINSERT INTO `contas` (`tipo_conta_id`, `created_at`, `nome`, `updated_at`, `descricao`) VALUES(NULL, '2010-03-20 20:21:14', NULL, '2010-03-20 20:21:14', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (0.3ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 20:21:14', `nome` = 'conta corrente Itau' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Update (0.2ms)[0m   [0mUPDATE `contas` SET `updated_at` = '2010-03-20 20:21:14', `descricao` = 'conta corrente no itau, agencia 3784 - c/c 29798-2' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mTipoConta Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mTipoConta Create (0.2ms)[0m   [0mINSERT INTO `tipo_contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 20:21:14', 'conta corrente', '2010-03-20 20:21:14', 'conta corrente bancaria')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (0.4ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 20:21:14', `tipo_conta_id` = 1 WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`nome` = 'conta corrente Itau') LIMIT 1[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Create (0.3ms)[0m   [0mINSERT INTO `contas` (`tipo_conta_id`, `created_at`, `nome`, `updated_at`, `descricao`) VALUES(NULL, '2010-03-20 20:22:54', NULL, '2010-03-20 20:22:54', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (0.3ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 20:22:54', `nome` = 'conta corrente Itau' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Update (0.2ms)[0m   [0mUPDATE `contas` SET `updated_at` = '2010-03-20 20:22:54', `descricao` = 'conta corrente no itau, agencia 3784 - c/c 29798-2' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mTipoConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mTipoConta Create (0.2ms)[0m   [0mINSERT INTO `tipo_contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 20:22:54', 'conta corrente', '2010-03-20 20:22:54', 'conta corrente bancaria')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (0.3ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 20:22:54', `tipo_conta_id` = 2 WHERE `id` = 3[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mConta Load (0.4ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`nome` = 'conta corrente Itau') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Create (0.5ms)[0m   [0mINSERT INTO `contas` (`tipo_conta_id`, `created_at`, `nome`, `updated_at`, `descricao`) VALUES(NULL, '2010-03-20 20:23:34', NULL, '2010-03-20 20:23:34', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (0.3ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 20:23:34', `nome` = 'conta corrente Itau' WHERE `id` = 4[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Update (0.2ms)[0m   [0mUPDATE `contas` SET `updated_at` = '2010-03-20 20:23:34', `descricao` = 'conta corrente no itau, agencia 3784 - c/c 29798-2' WHERE `id` = 4[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mTipoConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mTipoConta Create (0.2ms)[0m   [0mINSERT INTO `tipo_contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 20:23:34', 'conta corrente', '2010-03-20 20:23:34', 'conta corrente bancaria')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (0.3ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 20:23:34', `tipo_conta_id` = 3 WHERE `id` = 4[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mConta Load (1.1ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`nome` = 'conta corrente Itau') LIMIT 1[0m
+  [4;35;1mTipoConta Load (0.2ms)[0m   [0mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`nome` = 'conta corrente') LIMIT 1[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Create (1.5ms)[0m   [0mINSERT INTO `contas` (`tipo_conta_id`, `created_at`, `nome`, `updated_at`, `descricao`) VALUES(NULL, '2010-03-20 20:27:04', NULL, '2010-03-20 20:27:04', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (0.3ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 20:27:04', `nome` = 'conta corrente Itau' WHERE `id` = 5[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mConta Update (0.2ms)[0m   [0mUPDATE `contas` SET `updated_at` = '2010-03-20 20:27:04', `descricao` = 'conta corrente no itau, agencia 3784 - c/c 29798-2' WHERE `id` = 5[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mTipoConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mTipoConta Create (0.2ms)[0m   [0mINSERT INTO `tipo_contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 20:27:04', 'conta corrente', '2010-03-20 20:27:04', 'conta corrente bancaria')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mConta Update (0.4ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-20 20:27:04', `tipo_conta_id` = 4 WHERE `id` = 5[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`nome` = 'conta corrente Itau') LIMIT 1[0m
+  [4;35;1mTipoConta Load (0.2ms)[0m   [0mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`nome` = 'conta corrente') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mTipoConta Create (0.2ms)[0m   [0mINSERT INTO `tipo_contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 20:27:04', NULL, '2010-03-20 20:27:04', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mTipoConta Update (0.3ms)[0m   [0;1mUPDATE `tipo_contas` SET `updated_at` = '2010-03-20 20:27:04', `nome` = 'conta corrente' WHERE `id` = 5[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mTipoConta Update (0.2ms)[0m   [0mUPDATE `tipo_contas` SET `updated_at` = '2010-03-20 20:27:04', `descricao` = 'conta corrente bancaria' WHERE `id` = 5[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mTipoConta Load (0.3ms)[0m   [0mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`nome` = 'conta corrente') LIMIT 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m

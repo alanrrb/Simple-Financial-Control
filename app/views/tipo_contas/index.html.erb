@@ -1,0 +1,22 @@
+<h1>Listing tipo_contas</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Descricao</th>
+  </tr>
+
+<% @tipo_contas.each do |tipo_conta| %>
+  <tr>
+    <td><%=h tipo_conta.nome %></td>
+    <td><%=h tipo_conta.descricao %></td>
+    <td><%= link_to 'Show', tipo_conta %></td>
+    <td><%= link_to 'Edit', edit_tipo_conta_path(tipo_conta) %></td>
+    <td><%= link_to 'Destroy', tipo_conta, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tipo_conta', new_tipo_conta_path %>

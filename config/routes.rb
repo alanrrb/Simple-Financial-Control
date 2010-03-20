@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :tipo_lancamentos
+
+  map.resources :tipo_lancamentos
+
+  map.resources :tipo_contas
+
+  map.resources :contas
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

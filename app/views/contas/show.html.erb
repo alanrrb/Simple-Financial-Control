@@ -1,0 +1,18 @@
+<table>
+	<tr>
+		<td>Nome:</td>
+		<td><%= @conta.nome %></td>
+	</tr>
+	<tr>
+		<td>Descrição</td>
+		<td><%= @conta.descricao %></td>
+	</tr>
+	<tr>
+		<td>Tipo Conta</td>
+		<td><%= @conta.tipo_conta.nome %></td>
+	</tr>	
+</table>
+
+
+<%= link_to 'Editar', edit_conta_path(@conta) %> |
+<%= link_to 'Voltar', contas_path %>

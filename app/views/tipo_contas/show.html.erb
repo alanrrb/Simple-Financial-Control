@@ -1,0 +1,13 @@
+<p>
+  <b>Nome:</b>
+  <%=h @tipo_conta.nome %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%=h @tipo_conta.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipo_conta_path(@tipo_conta) %> |
+<%= link_to 'Back', tipo_contas_path %>

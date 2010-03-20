@@ -1,0 +1,2 @@
+module TipoContasHelper
+end

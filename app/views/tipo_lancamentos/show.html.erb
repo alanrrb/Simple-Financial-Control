@@ -1,0 +1,13 @@
+<p>
+  <b>Nome:</b>
+  <%=h @tipo_lancamento.nome %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%=h @tipo_lancamento.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipo_lancamento_path(@tipo_lancamento) %> |
+<%= link_to 'Back', tipo_lancamentos_path %>

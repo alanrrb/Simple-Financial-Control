@@ -1,0 +1,758 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (92.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (184.8ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (89.2ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (203.2ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('0')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (157.2ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (229.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('0')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContas (20100320183807)
+  [4;36;1mSQL (111.6ms)[0m   [0;1mCREATE TABLE `contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100320183807')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (29.0ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `contas`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (112.2ms)[0m   [0mCREATE TABLE `contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (128.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (114.4ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320183807')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (76.2ms)[0m   [0mCREATE TABLE `contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (121.7ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (114.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320183807')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (161.9ms)[0m   [0mCREATE TABLE `contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (218.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (115.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320183807')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (86.0ms)[0m   [0mCREATE TABLE `contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (174.7ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (116.5ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320183807')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (6.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.8ms)[0m   [0mCREATE TABLE `contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (157.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (174.9ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (16.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320183807')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (107.6ms)[0m   [0mCREATE TABLE `contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (151.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (104.8ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320183807')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (19.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContas (20100320183807)
+Migrating to CreateTipoContas (20100320200421)
+  [4;36;1mSQL (91.1ms)[0m   [0;1mCREATE TABLE `tipo_contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100320200421')[0m
+Migrating to AddTipoContaIdToConta (20100320200839)
+  [4;36;1mSQL (137.0ms)[0m   [0;1mALTER TABLE `contas` ADD `tipo_conta_id` int(11)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100320200839')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `contas`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `contas`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mdescribe `tipo_contas`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `tipo_contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (40.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContas (20100320183807)
+Migrating to CreateTipoContas (20100320200421)
+Migrating to AddTipoContaIdToConta (20100320200839)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (32.4ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `contas`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `contas`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `tipo_contas`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `tipo_contas`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (85.7ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (64.7ms)[0m   [0mCREATE TABLE `contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime, `tipo_conta_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (128.0ms)[0m   [0mCREATE TABLE `tipo_contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (111.5ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (114.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320200839')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100320183807')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320200421')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (123.5ms)[0m   [0mCREATE TABLE `contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime, `tipo_conta_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (90.8ms)[0m   [0mCREATE TABLE `tipo_contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (110.5ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (103.5ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320200839')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100320183807')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320200421')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (17.9ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.3ms)[0m   [0mCREATE TABLE `contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime, `tipo_conta_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (223.2ms)[0m   [0mCREATE TABLE `tipo_contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (110.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (115.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320200839')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100320183807')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320200421')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (37.3ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (88.9ms)[0m   [0mCREATE TABLE `contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime, `tipo_conta_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (194.5ms)[0m   [0mCREATE TABLE `tipo_contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (110.3ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (114.6ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320200839')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100320183807')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320200421')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (20.3ms)[0m   [0;1mDROP DATABASE IF EXISTS `simple-financial-control_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `simple-financial-control_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (61.3ms)[0m   [0mCREATE TABLE `contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime, `tipo_conta_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (127.3ms)[0m   [0mCREATE TABLE `tipo_contas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (113.5ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (123.7ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320200839')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100320183807')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100320200421')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-03-20 17:34:27) [GET]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 83ms (View: 13, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContaController#index (for 127.0.0.1 at 2010-03-20 17:34:35) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-03-20 17:34:39) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` [0m
+Rendering template within layouts/contas
+Rendering contas/index
+Completed in 150ms (View: 139, DB: 1) | 200 OK [http://localhost/contas]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-03-20 17:34:42) [GET]
+  [4;35;1mConta Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+Rendering template within layouts/contas
+Rendering contas/new
+Completed in 17ms (View: 10, DB: 2) | 200 OK [http://localhost/contas/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-03-20 17:34:47) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"m7YDSMyh7L7rWeZRR8oM6My3cxehtKld9wtY0xJJhxI="}
+  [4;36;1mConta Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mConta Create (0.3ms)[0m   [0;1mINSERT INTO `contas` (`tipo_conta_id`, `created_at`, `nome`, `updated_at`, `descricao`) VALUES(NULL, '2010-03-20 20:34:47', NULL, '2010-03-20 20:34:47', NULL)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/contas/1
+Completed in 13ms (DB: 3) | 302 Found [http://localhost/contas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-03-20 17:34:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mConta Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (49.6ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = 1) [0m
+Rendering template within layouts/contas
+Rendering contas/show
+Completed in 130ms (View: 73, DB: 51) | 200 OK [http://localhost/contas/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-03-20 17:34:56) [GET]
+  [4;36;1mConta Load (0.4ms)[0m   [0;1mSELECT * FROM `contas` [0m
+Rendering template within layouts/contas
+Rendering contas/index
+  [4;35;1mConta Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+Completed in 15ms (View: 6, DB: 2) | 200 OK [http://localhost/contas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#destroy (for 127.0.0.1 at 2010-03-20 17:35:01) [DELETE]
+  Parameters: {"authenticity_token"=>"m7YDSMyh7L7rWeZRR8oM6My3cxehtKld9wtY0xJJhxI=", "id"=>"1"}
+  [4;36;1mConta Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Destroy (16.8ms)[0m   [0mDELETE FROM `contas` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/contas
+Completed in 27ms (DB: 19) | 302 Found [http://localhost/contas/1]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-03-20 17:35:01) [GET]
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` [0m
+Rendering template within layouts/contas
+Rendering contas/index
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/contas]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-03-20 17:50:33) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` [0m
+Rendering template within layouts/contas
+Rendering contas/index
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/contas]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-03-20 17:50:36) [GET]
+  [4;35;1mConta Columns (55.8ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+Rendering template within layouts/contas
+Rendering contas/new
+Completed in 72ms (View: 12, DB: 56) | 200 OK [http://localhost/contas/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-03-20 17:50:41) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` [0m
+Rendering template within layouts/contas
+Rendering contas/index
+Completed in 6ms (View: 2, DB: 1) | 200 OK [http://localhost/contas]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-20 17:57:25) [GET]
+
+ActionController::RoutingError (No route matches "/tipocontas" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TipoContasController#index (for 127.0.0.1 at 2010-03-20 17:58:55) [GET]
+  [4;36;1mTipoConta Load (0.4ms)[0m   [0;1mSELECT * FROM `tipo_contas` [0m
+Rendering template within layouts/tipo_contas
+Rendering tipo_contas/index
+Completed in 40ms (View: 27, DB: 1) | 200 OK [http://localhost/tipo_contas]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TipoContasController#new (for 127.0.0.1 at 2010-03-20 17:58:59) [GET]
+  [4;35;1mTipoConta Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+Rendering template within layouts/tipo_contas
+Rendering tipo_contas/new
+Completed in 18ms (View: 12, DB: 2) | 200 OK [http://localhost/tipo_contas/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TipoContasController#create (for 127.0.0.1 at 2010-03-20 17:59:16) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"m7YDSMyh7L7rWeZRR8oM6My3cxehtKld9wtY0xJJhxI=", "tipo_conta"=>{"nome"=>"Conta Corrente", "descricao"=>"conta corrente bancaria"}}
+  [4;36;1mTipoConta Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTipoConta Create (0.2ms)[0m   [0;1mINSERT INTO `tipo_contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 20:59:16', 'Conta Corrente', '2010-03-20 20:59:16', 'conta corrente bancaria')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/tipo_contas/1
+Completed in 13ms (DB: 4) | 302 Found [http://localhost/tipo_contas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TipoContasController#show (for 127.0.0.1 at 2010-03-20 17:59:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTipoConta Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;35;1mTipoConta Load (0.3ms)[0m   [0mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`id` = 1) [0m
+Rendering template within layouts/tipo_contas
+Rendering tipo_contas/show
+Completed in 19ms (View: 11, DB: 2) | 200 OK [http://localhost/tipo_contas/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TipoContasController#index (for 127.0.0.1 at 2010-03-20 17:59:19) [GET]
+  [4;36;1mTipoConta Load (0.3ms)[0m   [0;1mSELECT * FROM `tipo_contas` [0m
+Rendering template within layouts/tipo_contas
+Rendering tipo_contas/index
+  [4;35;1mTipoConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+Completed in 81ms (View: 6, DB: 2) | 200 OK [http://localhost/tipo_contas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TipoContasController#new (for 127.0.0.1 at 2010-03-20 17:59:22) [GET]
+  [4;36;1mTipoConta Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+Rendering template within layouts/tipo_contas
+Rendering tipo_contas/new
+Completed in 11ms (View: 5, DB: 2) | 200 OK [http://localhost/tipo_contas/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TipoContasController#create (for 127.0.0.1 at 2010-03-20 18:00:14) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"m7YDSMyh7L7rWeZRR8oM6My3cxehtKld9wtY0xJJhxI=", "tipo_conta"=>{"nome"=>"Cartao de Credito", "descricao"=>"Cartão Credito com vencimento definido"}}
+  [4;35;1mTipoConta Columns (12.5ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTipoConta Create (0.3ms)[0m   [0mINSERT INTO `tipo_contas` (`created_at`, `nome`, `updated_at`, `descricao`) VALUES('2010-03-20 21:00:14', 'Cartao de Credito', '2010-03-20 21:00:14', 'Cartão Credito com vencimento definido')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/tipo_contas/2
+Completed in 25ms (DB: 14) | 302 Found [http://localhost/tipo_contas]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TipoContasController#show (for 127.0.0.1 at 2010-03-20 18:00:14) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTipoConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;36;1mTipoConta Load (0.3ms)[0m   [0;1mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`id` = 2) [0m
+Rendering template within layouts/tipo_contas
+Rendering tipo_contas/show
+Completed in 10ms (View: 3, DB: 2) | 200 OK [http://localhost/tipo_contas/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TipoContasController#index (for 127.0.0.1 at 2010-03-20 18:00:22) [GET]
+  [4;35;1mTipoConta Load (0.3ms)[0m   [0mSELECT * FROM `tipo_contas` [0m
+Rendering template within layouts/tipo_contas
+Rendering tipo_contas/index
+  [4;36;1mTipoConta Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+Completed in 17ms (View: 10, DB: 2) | 200 OK [http://localhost/tipo_contas]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TipoContasController#new (for 127.0.0.1 at 2010-03-20 18:12:45) [GET]
+  [4;36;1mTipoConta Columns (36.5ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+Rendering template within layouts/tipo_contas
+Rendering tipo_contas/new
+Completed in 81ms (View: 31, DB: 37) | 200 OK [http://localhost/tipo_contas/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-03-20 18:13:01) [GET]
+  [4;35;1mConta Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mTipoConta Load (0.5ms)[0m   [0;1mSELECT * FROM `tipo_contas` [0m
+Rendering template within layouts/contas
+Rendering contas/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `tipo_contas` [0m
+  [4;36;1mTipoConta Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+Completed in 56ms (View: 41, DB: 5) | 200 OK [http://localhost/contas/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#create (for 127.0.0.1 at 2010-03-20 18:14:12) [POST]
+  Parameters: {"commit"=>"Cadastrar Conta", "authenticity_token"=>"m7YDSMyh7L7rWeZRR8oM6My3cxehtKld9wtY0xJJhxI=", "conta"=>{"tipo_conta_id"=>"1", "nome"=>"Conta corrent Itau", "descricao"=>"Conta corrente agencia 3784 - cc 29798-2"}}
+  [4;35;1mConta Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Create (0.3ms)[0m   [0mINSERT INTO `contas` (`tipo_conta_id`, `created_at`, `nome`, `updated_at`, `descricao`) VALUES(1, '2010-03-20 21:14:12', 'Conta corrent Itau', '2010-03-20 21:14:12', 'Conta corrente agencia 3784 - cc 29798-2')[0m
+  [4;36;1mSQL (22.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/contas/2
+Completed in 36ms (DB: 25) | 302 Found [http://localhost/contas]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-03-20 18:14:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mConta Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.6ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = 2) [0m
+Rendering template within layouts/contas
+Rendering contas/show
+  [4;35;1mTipoConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;36;1mTipoConta Load (0.3ms)[0m   [0;1mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`id` = 1) [0m
+Completed in 107ms (View: 97, DB: 4) | 200 OK [http://localhost/contas/2]
+/!\ FAILSAFE /!\  Sat Mar 20 19:37:06 -0300 2010
+  Status: 500 Internal Server Error
+  Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-03-20 19:37:48) [GET]
+  [4;36;1mConta Load (17.9ms)[0m   [0;1mSELECT * FROM `contas` [0m
+Rendering template within layouts/contas
+Rendering contas/index
+  [4;35;1mConta Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mTipoConta Columns (33.5ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;35;1mTipoConta Load (0.5ms)[0m   [0mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`id` = 1) [0m
+Completed in 230ms (View: 140, DB: 54) | 200 OK [http://localhost/contas/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-03-20 19:37:53) [GET]
+  [4;36;1mConta Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mTipoConta Load (0.4ms)[0m   [0mSELECT * FROM `tipo_contas` [0m
+Rendering template within layouts/contas
+Rendering contas/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `tipo_contas` [0m
+  [4;35;1mTipoConta Columns (7.9ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+Completed in 46ms (View: 29, DB: 10) | 200 OK [http://localhost/contas/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-03-20 19:38:49) [GET]
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` [0m
+Rendering template within layouts/contas
+Rendering contas/index
+  [4;35;1mConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mTipoConta Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;35;1mTipoConta Load (0.2ms)[0m   [0mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`id` = 1) [0m
+Completed in 20ms (View: 12, DB: 3) | 200 OK [http://localhost/contas]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#new (for 127.0.0.1 at 2010-03-20 19:44:11) [GET]
+  [4;36;1mConta Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mTipoConta Load (0.4ms)[0m   [0mSELECT * FROM `tipo_contas` [0m
+Rendering template within layouts/contas
+Rendering contas/new
+  [4;36;1mTipoConta Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+Completed in 52ms (View: 29, DB: 5) | 200 OK [http://localhost/contas/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (13.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContas (20100320183807)
+Migrating to CreateTipoContas (20100320200421)
+Migrating to AddTipoContaIdToConta (20100320200839)
+Migrating to CreateTipoLancamentos (20100320224551)
+  [4;36;1mSQL (69.0ms)[0m   [0;1mCREATE TABLE `tipo_lancamentos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100320224551')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `contas`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `contas`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mdescribe `tipo_contas`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW KEYS FROM `tipo_contas`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `tipo_lancamentos`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `tipo_lancamentos`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `tipo_lancamentos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContas (20100320183807)
+Migrating to CreateTipoContas (20100320200421)
+Migrating to AddTipoContaIdToConta (20100320200839)
+Migrating to CreateTipoLancamentos (20100320224551)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `contas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `contas`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mdescribe `tipo_contas`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `tipo_contas`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `tipo_lancamentos`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `tipo_lancamentos`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `tipo_lancamentos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContas (20100320183807)
+Migrating to CreateTipoContas (20100320200421)
+Migrating to AddTipoContaIdToConta (20100320200839)
+Migrating to CreateTipoLancamentos (20100320224551)
+Migrating to AddNomeAndDescricaoToTipoLancamento (20100320225049)
+  [4;36;1mSQL (113.5ms)[0m   [0;1mALTER TABLE `tipo_lancamentos` ADD `nome` varchar(255)[0m
+  [4;35;1mSQL (196.6ms)[0m   [0mALTER TABLE `tipo_lancamentos` ADD `descricao` text[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100320225049')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mdescribe `contas`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `contas`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `tipo_contas`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW KEYS FROM `tipo_contas`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `tipo_lancamentos`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `tipo_lancamentos`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW KEYS FROM `tipo_lancamentos`[0m
