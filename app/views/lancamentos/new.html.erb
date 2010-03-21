@@ -9,7 +9,7 @@
   </p>
   <p>
     <%= f.label :data %><br />
-    <%= f.date_select :data %>
+    <%= f.date_select :data, :order => [:day, :month, :year] %>
   </p>
   <p>
     <%= f.label :descricao %><br />
@@ -17,7 +17,7 @@
   </p>
   <p>
     <%= f.label :tipo_lancamento_id %><br />
-    <%= f.text_field :tipo_lancamento_id %>
+    <%= select("lancamento", "tipo_lancamento_id", TipoLancamento.all.collect{|t| [t.nome, t.id]}, {:prompt => 'Selecione...'}) %> - <%= link_to 'Cadastrar novo tipo de lançamento', new_tipo_lancamento_path %>
   </p>
   <p>
     <%= f.label :conta_id %><br />
@@ -26,7 +26,7 @@
   <p>
     <%= f.label :credito_debito %><br />
     <%= select("lancamento", "credito_debito", 
-	%w{crédito débito}, {:prompt => 'Selecione...'}) %>
+	[['Crédito', "c"], ['Débito', "d"]], {:prompt => 'Selecione...'}) %>
   </p>
   <p>
     <%= f.submit 'Cadastrar' %>
