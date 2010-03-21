@@ -1,0 +1,36 @@
+<h1>Novo lançamento</h1>
+
+<% form_for(@lancamento) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :valor %><br />
+    <%= f.text_field :valor %>
+  </p>
+  <p>
+    <%= f.label :data %><br />
+    <%= f.date_select :data %>
+  </p>
+  <p>
+    <%= f.label :descricao %><br />
+    <%= f.text_area :descricao %>
+  </p>
+  <p>
+    <%= f.label :tipo_lancamento_id %><br />
+    <%= f.text_field :tipo_lancamento_id %>
+  </p>
+  <p>
+    <%= f.label :conta_id %><br />
+    <%= select("lancamento", "conta_id", 
+	Conta.all.collect {|c| [ c.nome, c.id ] }, {:prompt => 'Selecione...'}) %></p>
+  <p>
+    <%= f.label :credito_debito %><br />
+    <%= select("lancamento", "credito_debito", 
+	%w{crédito débito}, {:prompt => 'Selecione...'}) %>
+  </p>
+  <p>
+    <%= f.submit 'Cadastrar' %>
+  </p>
+<% end %>
+
+<%= link_to 'Voltar', lancamentos_path %>

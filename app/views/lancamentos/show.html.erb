@@ -1,0 +1,33 @@
+<p>
+  <b>Valor:</b>
+  <%=h @lancamento.valor %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%=h @lancamento.data %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%=h @lancamento.descricao %>
+</p>
+
+<p>
+  <b>Tipo lancamento:</b>
+  <%=h @lancamento.tipo_lancamento_id %>
+</p>
+
+<p>
+  <b>Conta:</b>
+  <%=h @lancamento.conta_id %>
+</p>
+
+<p>
+  <b>Credito debito:</b>
+  <%=h @lancamento.credito_debito %>
+</p>
+
+
+<%= link_to 'Edit', edit_lancamento_path(@lancamento) %> |
+<%= link_to 'Back', lancamentos_path %>

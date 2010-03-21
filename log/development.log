@@ -756,3 +756,252 @@ Migrating to AddNomeAndDescricaoToTipoLancamento (20100320225049)
   [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `tipo_lancamentos`[0m
   [4;35;1mSQL (2.0ms)[0m   [0mdescribe `tipo_lancamentos`[0m
   [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW KEYS FROM `tipo_lancamentos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (58.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContas (20100320183807)
+Migrating to CreateTipoContas (20100320200421)
+Migrating to AddTipoContaIdToConta (20100320200839)
+Migrating to CreateTipoLancamentos (20100320224551)
+Migrating to AddNomeAndDescricaoToTipoLancamento (20100320225049)
+Migrating to CreateLancamentos (20100321000345)
+  [4;36;1mSQL (68.7ms)[0m   [0;1mCREATE TABLE `lancamentos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `valor` float, `data` date, `descricao` text, `tipo_lancamento_id` int(11), `conta_id` int(11), `credito_debito` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100321000345')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (18.1ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `contas`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `contas`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mdescribe `lancamentos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `lancamentos`[0m
+  [4;35;1mSQL (11.1ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;36;1mSQL (19.0ms)[0m   [0;1mdescribe `tipo_contas`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW KEYS FROM `tipo_contas`[0m
+  [4;36;1mSQL (32.9ms)[0m   [0;1mSHOW FIELDS FROM `tipo_lancamentos`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mdescribe `tipo_lancamentos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `tipo_lancamentos`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2010-03-20 21:09:35) [GET]
+  [4;35;1mLancamento Load (0.3ms)[0m   [0mSELECT * FROM `lancamentos` [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 113ms (View: 108, DB: 1) | 200 OK [http://localhost/lancamentos]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2010-03-20 21:09:46) [GET]
+  [4;36;1mLancamento Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 221ms (View: 214, DB: 2) | 200 OK [http://localhost/lancamentos/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2010-03-20 21:19:13) [GET]
+  [4;35;1mLancamento Columns (26.6ms)[0m   [0mSHOW FIELDS FROM `lancamentos`[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+ERROR: compiling _run_erb_app47views47lancamentos47new46html46erb RAISED compile error
+/Users/alan/git-repositories/Simple-Financial-Control/app/views/lancamentos/new.html.erb:24: syntax error, unexpected '<'
+; @output_buffer.concat(( <%= select("lancamento", "conta_id", 
+                           ^
+/Users/alan/git-repositories/Simple-Financial-Control/app/views/lancamentos/new.html.erb:25: syntax error, unexpected '}', expecting ')'
+...}, {:prompt => 'Selecione...'}) ).to_s); @output_buffer.conc...
+                              ^
+Function body:           def _run_erb_app47views47lancamentos47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New lancamento</h1>\n\n"
+
+;  form_for(@lancamento) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :valor ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :valor ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :data ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.date_select :data ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descricao ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :descricao ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :tipo_lancamento_id ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :tipo_lancamento_id ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :conta_id ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( <%= select("lancamento", "conta_id", 
+	Conta.all.collect {|c| [ c.nome, c.id ] }, {:prompt => 'Selecione...'}) ).to_s); @output_buffer.concat " %>\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :credito_debito ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :credito_debito ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', lancamentos_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/alan/git-repositories/Simple-Financial-Control/app/views/lancamentos/new.html.erb:39:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/alan/git-repositories/Simple-Financial-Control/app/controllers/lancamentos_controller.rb:29:in `new'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/alan/git-repositories/Simple-Financial-Control/app/views/lancamentos/new.html.erb:24: syntax error, unexpected '<'
+; @output_buffer.concat(( <%= select("lancamento", "conta_id", 
+                           ^
+/Users/alan/git-repositories/Simple-Financial-Control/app/views/lancamentos/new.html.erb:25: syntax error, unexpected '}', expecting ')'
+...}, {:prompt => 'Selecione...'}) ).to_s); @output_buffer.conc...
+                              ^) on line #24 of app/views/lancamentos/new.html.erb:
+21:   </p>
+22:   <p>
+23:     <%= f.label :conta_id %><br />
+24:     <%= <%= select("lancamento", "conta_id", 
+25: 	Conta.all.collect {|c| [ c.nome, c.id ] }, {:prompt => 'Selecione...'}) %> %>
+26:   </p>
+27:   <p>
+
+    app/views/lancamentos/new.html.erb:39:in `compile!'
+    app/controllers/lancamentos_controller.rb:29:in `new'
+
+Rendered rescues/_trace (121.4ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2010-03-20 21:19:52) [GET]
+  [4;36;1mLancamento Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` [0m
+  [4;36;1mConta Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+Completed in 71ms (View: 62, DB: 3) | 200 OK [http://localhost/lancamentos/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2010-03-20 21:21:12) [GET]
+  [4;35;1mLancamento Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lancamentos`[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` [0m
+  [4;35;1mConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+Completed in 35ms (View: 25, DB: 3) | 200 OK [http://localhost/lancamentos/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2010-03-20 21:21:59) [GET]
+  [4;36;1mLancamento Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+  [4;35;1mConta Load (0.4ms)[0m   [0mSELECT * FROM `contas` [0m
+  [4;36;1mConta Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+Completed in 109ms (View: 100, DB: 4) | 200 OK [http://localhost/lancamentos/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2010-03-20 21:22:42) [GET]
+  [4;35;1mLancamento Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `lancamentos`[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+  [4;36;1mConta Load (0.4ms)[0m   [0;1mSELECT * FROM `contas` [0m
+  [4;35;1mConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+Completed in 36ms (View: 25, DB: 4) | 200 OK [http://localhost/lancamentos/new]

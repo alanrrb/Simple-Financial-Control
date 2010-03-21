@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  valor: 1.5
+  data: 2010-03-20
+  descricao: MyText
+  tipo_lancamento_id: 1
+  conta_id: 1
+  credito_debito: MyString
+
+two:
+  valor: 1.5
+  data: 2010-03-20
+  descricao: MyText
+  tipo_lancamento_id: 1
+  conta_id: 1
+  credito_debito: MyString

@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :lancamentos
+
   map.resources :tipo_lancamentos
 
   map.resources :tipo_lancamentos
