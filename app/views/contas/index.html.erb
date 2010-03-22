@@ -6,6 +6,7 @@
 	<th>Descrição</th>
 	<th>Tipo Conta</th>
 	<th>Valor Inicial</th>
+	<th>Data de Cadastro</th>
   </tr>
 
 <% @contas.each do |conta| %>
@@ -14,9 +15,11 @@
 	<td><%= conta.descricao%></td>
 	<td><%= conta.tipo_conta.nome %></td>
 	<td><%= conta.valor_inicial %></td>
-    <td><%= link_to 'Show', conta %></td>
-    <td><%= link_to 'Edit', edit_conta_path(conta) %></td>
-    <td><%= link_to 'Destroy', conta, :confirm => 'Are you sure?', :method => :delete %></td>
+	<td><%= conta.created_at.strftime("%d/%m/%Y %H:%M") %></td>
+    <td><%= link_to 'Mostrar', conta %></td>
+    <td><%= link_to 'Editar', edit_conta_path(conta) %></td>
+    <td><%= link_to 'Apagar', conta, :confirm => 'Are you sure?', :method => :delete %></td>
+<td><%= link_to 'Saldo Atual', "../saldo/#{conta.id}"%></td>
   </tr>
 <% end %>
 </table>
