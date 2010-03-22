@@ -1694,3 +1694,592 @@ Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 03:55:38) [GET]
   [4;35;1mConta Load (4.6ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
 Rendering saldo/atual
 Completed in 24ms (View: 2, DB: 8) | 200 OK [http://localhost/saldo/2]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (51.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (14.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContas (20100320183807)
+Migrating to CreateTipoContas (20100320200421)
+Migrating to AddTipoContaIdToConta (20100320200839)
+Migrating to CreateTipoLancamentos (20100320224551)
+Migrating to AddNomeAndDescricaoToTipoLancamento (20100320225049)
+Migrating to CreateLancamentos (20100321000345)
+Migrating to AddSaldoInicialToConta (20100321234203)
+  [4;36;1mSQL (75.5ms)[0m   [0;1mALTER TABLE `contas` ADD `valor_inicial` float[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100321234203')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `contas`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `contas`[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `lancamentos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `lancamentos`[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `tipo_contas`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `tipo_contas`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSHOW FIELDS FROM `tipo_lancamentos`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `tipo_lancamentos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `tipo_lancamentos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 20:59:36) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mLancamento Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'c' AND `lancamentos`.`data` = '2010-03-21') [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '2010-03-21') [0m
+  [4;35;1mConta Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 162ms (View: 49, DB: 5) | 200 OK [http://localhost/saldo/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-03-21 20:59:42) [GET]
+  [4;35;1mConta Load (0.4ms)[0m   [0mSELECT * FROM `contas` [0m
+Rendering template within layouts/contas
+Rendering contas/index
+  [4;36;1mConta Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mTipoConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;36;1mTipoConta Load (0.2ms)[0m   [0;1mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`id` = 1) [0m
+Completed in 61ms (View: 53, DB: 4) | 200 OK [http://localhost/contas]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-03-21 20:59:47) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTipoConta Load (0.4ms)[0m   [0mSELECT * FROM `tipo_contas` [0m
+  [4;36;1mConta Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = 2) [0m
+Rendering template within layouts/contas
+Rendering contas/edit
+  [4;36;1mTipoConta Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+Completed in 94ms (View: 16, DB: 3) | 200 OK [http://localhost/contas/2/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#update (for 127.0.0.1 at 2010-03-21 20:59:58) [PUT]
+  Parameters: {"commit"=>"Atualizar", "authenticity_token"=>"m7YDSMyh7L7rWeZRR8oM6My3cxehtKld9wtY0xJJhxI=", "id"=>"2", "conta"=>{"tipo_conta_id"=>"1", "nome"=>"Conta corrent Itau", "valor_inicial"=>"-4000", "descricao"=>"Conta corrente agencia 3784 - cc 29798-2"}}
+  [4;35;1mConta Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mConta Update (0.4ms)[0m   [0;1mUPDATE `contas` SET `updated_at` = '2010-03-21 23:59:58', `valor_inicial` = -4000.0 WHERE `id` = 2[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/contas/2
+Completed in 12ms (DB: 3) | 302 Found [http://localhost/contas/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-03-21 20:59:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mConta Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (1.0ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = 2) [0m
+Rendering template within layouts/contas
+Rendering contas/show
+  [4;36;1mTipoConta Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;35;1mTipoConta Load (0.4ms)[0m   [0mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`id` = 1) [0m
+Completed in 25ms (View: 15, DB: 5) | 200 OK [http://localhost/contas/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-03-21 21:00:00) [GET]
+  [4;36;1mConta Load (0.4ms)[0m   [0;1mSELECT * FROM `contas` [0m
+Rendering template within layouts/contas
+Rendering contas/index
+  [4;35;1mConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mTipoConta Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;35;1mTipoConta Load (0.3ms)[0m   [0mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`id` = 1) [0m
+Completed in 21ms (View: 12, DB: 3) | 200 OK [http://localhost/contas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-03-21 21:00:03) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTipoConta Load (0.3ms)[0m   [0;1mSELECT * FROM `tipo_contas` [0m
+  [4;35;1mConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.2ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = 2) [0m
+Rendering template within layouts/contas
+Rendering contas/edit
+  [4;35;1mTipoConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+Completed in 21ms (View: 10, DB: 3) | 200 OK [http://localhost/contas/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#update (for 127.0.0.1 at 2010-03-21 21:00:05) [PUT]
+  Parameters: {"commit"=>"Atualizar", "authenticity_token"=>"m7YDSMyh7L7rWeZRR8oM6My3cxehtKld9wtY0xJJhxI=", "id"=>"2", "conta"=>{"tipo_conta_id"=>"1", "nome"=>"Conta corrent Itau", "valor_inicial"=>"-4000", "descricao"=>"Conta corrente agencia 3784 - cc 29798-2"}}
+  [4;36;1mConta Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/contas/2
+Completed in 11ms (DB: 2) | 302 Found [http://localhost/contas/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-03-21 21:00:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mConta Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = 2) [0m
+Rendering template within layouts/contas
+Rendering contas/show
+  [4;36;1mTipoConta Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;35;1mTipoConta Load (1.4ms)[0m   [0mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`id` = 1) [0m
+Completed in 20ms (View: 9, DB: 5) | 200 OK [http://localhost/contas/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-03-21 21:00:14) [GET]
+  [4;36;1mConta Load (0.4ms)[0m   [0;1mSELECT * FROM `contas` [0m
+Rendering template within layouts/contas
+Rendering contas/index
+  [4;35;1mConta Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mTipoConta Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;35;1mTipoConta Load (0.5ms)[0m   [0mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`id` = 1) [0m
+Completed in 20ms (View: 11, DB: 4) | 200 OK [http://localhost/contas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-03-21 21:01:38) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTipoConta Load (0.3ms)[0m   [0;1mSELECT * FROM `tipo_contas` [0m
+  [4;35;1mConta Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.6ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = 2) [0m
+Rendering template within layouts/contas
+Rendering contas/edit
+  [4;35;1mTipoConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+Completed in 22ms (View: 10, DB: 4) | 200 OK [http://localhost/contas/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#update (for 127.0.0.1 at 2010-03-21 21:01:42) [PUT]
+  Parameters: {"commit"=>"Atualizar", "authenticity_token"=>"m7YDSMyh7L7rWeZRR8oM6My3cxehtKld9wtY0xJJhxI=", "id"=>"2", "conta"=>{"tipo_conta_id"=>"1", "nome"=>"Conta corrent Itau", "valor_inicial"=>"-4000", "descricao"=>"Conta corrente agencia 3784 - cc 29798-2"}}
+  [4;36;1mConta Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/contas/2
+Completed in 12ms (DB: 2) | 302 Found [http://localhost/contas/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-03-21 21:01:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mConta Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.7ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = 2) [0m
+Rendering template within layouts/contas
+Rendering contas/show
+  [4;36;1mTipoConta Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;35;1mTipoConta Load (1.3ms)[0m   [0mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`id` = 1) [0m
+Completed in 19ms (View: 8, DB: 5) | 200 OK [http://localhost/contas/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#edit (for 127.0.0.1 at 2010-03-21 21:01:55) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTipoConta Load (0.4ms)[0m   [0;1mSELECT * FROM `tipo_contas` [0m
+  [4;35;1mConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.6ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = 2) [0m
+Rendering template within layouts/contas
+Rendering contas/edit
+  [4;35;1mTipoConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+Completed in 22ms (View: 11, DB: 4) | 200 OK [http://localhost/contas/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#update (for 127.0.0.1 at 2010-03-21 21:02:10) [PUT]
+  Parameters: {"commit"=>"Atualizar", "authenticity_token"=>"m7YDSMyh7L7rWeZRR8oM6My3cxehtKld9wtY0xJJhxI=", "id"=>"2", "conta"=>{"tipo_conta_id"=>"1", "nome"=>"corrente Itau", "valor_inicial"=>"-4000", "descricao"=>"Conta corrente agencia 3784 - cc 29798-2"}}
+  [4;36;1mConta Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.7ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConta Update (0.3ms)[0m   [0mUPDATE `contas` SET `updated_at` = '2010-03-22 00:02:10', `nome` = 'corrente Itau' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/contas/2
+Completed in 13ms (DB: 4) | 302 Found [http://localhost/contas/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#show (for 127.0.0.1 at 2010-03-21 21:02:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mConta Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.8ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = 2) [0m
+Rendering template within layouts/contas
+Rendering contas/show
+  [4;35;1mTipoConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;36;1mTipoConta Load (2.5ms)[0m   [0;1mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`id` = 1) [0m
+Completed in 20ms (View: 8, DB: 6) | 200 OK [http://localhost/contas/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContasController#index (for 127.0.0.1 at 2010-03-21 21:02:12) [GET]
+  [4;35;1mConta Load (0.4ms)[0m   [0mSELECT * FROM `contas` [0m
+Rendering template within layouts/contas
+Rendering contas/index
+  [4;36;1mConta Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mTipoConta Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `tipo_contas`[0m
+  [4;36;1mTipoConta Load (0.3ms)[0m   [0;1mSELECT * FROM `tipo_contas` WHERE (`tipo_contas`.`id` = 1) [0m
+Completed in 21ms (View: 13, DB: 3) | 200 OK [http://localhost/contas]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 21:04:35) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mLancamento Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `lancamentos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'c' AND `lancamentos`.`data` = '2010-03-21') [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '2010-03-21') [0m
+  [4;36;1mConta Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 19ms (View: 1, DB: 4) | 200 OK [http://localhost/saldo/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 21:30:43) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"03", "id"=>"2", "dia"=>"10"}
+
+ArgumentError (comparison of String with 0 failed):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `<'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `valid_civil?'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:751:in `new'
+  app/controllers/saldo_controller.rb:4:in `atual'
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 21:31:48) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"03", "id"=>"2", "dia"=>"10"}
+
+ArgumentError (comparison of String with 0 failed):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `<'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `valid_civil?'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:751:in `new'
+  app/controllers/saldo_controller.rb:4:in `atual'
+
+Rendered rescues/_trace (37.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 21:31:50) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"03", "id"=>"2", "dia"=>"10"}
+
+ArgumentError (comparison of String with 0 failed):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `<'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `valid_civil?'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:751:in `new'
+  app/controllers/saldo_controller.rb:4:in `atual'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 21:32:28) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"03", "id"=>"2", "dia"=>"10"}
+
+ArgumentError (comparison of String with 0 failed):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `<'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `valid_civil?'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:751:in `new'
+  app/controllers/saldo_controller.rb:5:in `atual'
+
+Rendered rescues/_trace (115.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 21:32:31) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"03", "id"=>"2", "dia"=>"10"}
+
+ArgumentError (comparison of String with 0 failed):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `<'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `valid_civil?'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:751:in `new'
+  app/controllers/saldo_controller.rb:5:in `atual'
+
+Rendered rescues/_trace (40.4ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 21:33:03) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"10"}
+
+ArgumentError (comparison of String with 0 failed):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `<'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `valid_civil?'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:751:in `new'
+  app/controllers/saldo_controller.rb:5:in `atual'
+
+Rendered rescues/_trace (37.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 21:33:07) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"10"}
+
+ArgumentError (comparison of String with 0 failed):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `<'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `valid_civil?'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:751:in `new'
+  app/controllers/saldo_controller.rb:5:in `atual'
+
+Rendered rescues/_trace (38.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-21 21:34:32) [GET]
+
+ActionController::RoutingError (No route matches "/saldo/2/2010/3" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 21:34:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mLancamento Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'c' AND `lancamentos`.`data` = '2010-03-21') [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '2010-03-21') [0m
+  [4;35;1mConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.6ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 20ms (View: 1, DB: 4) | 200 OK [http://localhost/saldo/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 21:34:58) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"10"}
+
+ArgumentError (comparison of String with 0 failed):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `<'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `valid_civil?'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:751:in `new'
+  app/controllers/saldo_controller.rb:5:in `atual'
+
+Rendered rescues/_trace (112.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 21:35:51) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"10"}
+  [4;35;1mLancamento Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lancamentos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'c' AND `lancamentos`.`data` = '2010-03-10') [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '2010-03-10') [0m
+  [4;36;1mConta Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 18ms (View: 2, DB: 4) | 200 OK [http://localhost/saldo/2/2010/3/10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 21:35:54) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"10"}
+  [4;36;1mLancamento Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'c' AND `lancamentos`.`data` = '2010-03-10') [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '2010-03-10') [0m
+  [4;35;1mConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 17ms (View: 2, DB: 4) | 200 OK [http://localhost/saldo/2/2010/3/10]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 21:37:14) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"10"}
+  [4;35;1mLancamento Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lancamentos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'c' AND `lancamentos`.`data` = '2010-03-10') [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '< 2010-03-10') [0m
+  [4;36;1mConta Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 16ms (View: 1, DB: 4) | 200 OK [http://localhost/saldo/2/2010/3/10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:41:04) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"10"}
+  [4;36;1mLancamento Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'c' AND `lancamentos`.`data` = '2010-03-10') [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '< 2010-03-10') [0m
+  [4;35;1mConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 16ms (View: 1, DB: 4) | 200 OK [http://localhost/saldo/2/2010/3/10]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:41:05) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"10"}
+  [4;35;1mLancamento Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lancamentos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'c' AND `lancamentos`.`data` = '2010-03-10') [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '< 2010-03-10') [0m
+  [4;36;1mConta Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 87ms (View: 1, DB: 4) | 200 OK [http://localhost/saldo/2/2010/3/10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:41:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mLancamento Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'c' AND `lancamentos`.`data` = '2010-03-21') [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '< 2010-03-21') [0m
+  [4;35;1mConta Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 21ms (View: 1, DB: 5) | 200 OK [http://localhost/saldo/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:50:51) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"10"}
+  [4;35;1mLancamento Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `lancamentos`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (conta_id = '2' AND data < '2010-03-10' AND credito_debito = 'c') [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '< 2010-03-10') [0m
+  [4;36;1mConta Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 21ms (View: 1, DB: 6) | 200 OK [http://localhost/saldo/2/2010/3/10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:50:59) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"30"}
+  [4;36;1mLancamento Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (conta_id = '2' AND data < '2010-03-30' AND credito_debito = 'c') [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '< 2010-03-30') [0m
+  [4;35;1mConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 16ms (View: 1, DB: 4) | 200 OK [http://localhost/saldo/2/2010/3/30]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:51:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mLancamento Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `lancamentos`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (conta_id = '2' AND data < '2010-03-21' AND credito_debito = 'c') [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '< 2010-03-21') [0m
+  [4;36;1mConta Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (1.2ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 23ms (View: 1, DB: 6) | 200 OK [http://localhost/saldo/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:51:25) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"21"}
+  [4;36;1mLancamento Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (conta_id = '2' AND data < '2010-03-21' AND credito_debito = 'c') [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '< 2010-03-21') [0m
+  [4;35;1mConta Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.8ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 19ms (View: 1, DB: 4) | 200 OK [http://localhost/saldo/2/2010/3/21]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:51:31) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"22"}
+  [4;35;1mLancamento Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lancamentos`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (conta_id = '2' AND data < '2010-03-22' AND credito_debito = 'c') [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (`lancamentos`.`conta_id` = '2' AND `lancamentos`.`credito_debito` = 'd' AND `lancamentos`.`data` = '< 2010-03-22') [0m
+  [4;36;1mConta Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (1.0ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 20ms (View: 1, DB: 5) | 200 OK [http://localhost/saldo/2/2010/3/22]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:52:39) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"22"}
+  [4;36;1mLancamento Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (conta_id = '2' AND data <= '2010-03-22' AND credito_debito = 'c') [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (conta_id = '2' AND data <= '2010-03-22' AND credito_debito = 'd') [0m
+  [4;35;1mConta Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.3ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 16ms (View: 1, DB: 4) | 200 OK [http://localhost/saldo/2/2010/3/22]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:52:40) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"22"}
+  [4;35;1mLancamento Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lancamentos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (conta_id = '2' AND data <= '2010-03-22' AND credito_debito = 'c') [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (conta_id = '2' AND data <= '2010-03-22' AND credito_debito = 'd') [0m
+  [4;36;1mConta Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 17ms (View: 1, DB: 4) | 200 OK [http://localhost/saldo/2/2010/3/22]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:54:37) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"22"}
+  [4;36;1mLancamento Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `lancamentos`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (conta_id = '2' AND data <= '2010-03-22' AND credito_debito = 'c') [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (conta_id = '2' AND data <= '2010-03-22' AND credito_debito = 'd') [0m
+  [4;35;1mConta Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `contas`[0m
+  [4;36;1mConta Load (0.4ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 18ms (View: 1, DB: 5) | 200 OK [http://localhost/saldo/2/2010/3/22]

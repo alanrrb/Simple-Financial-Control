@@ -16,6 +16,10 @@
 		<td><%= select("conta", "tipo_conta_id", 
 		@tipo_contas.collect {|t| [ t.nome, t.id ] }, {:prompt => 'Selecione...'}) %></td>
 	</tr>
+	<tr>
+		<td><%= f.label :valor_inicial %></td>
+		<td><%= f.text_field :valor_inicial %></td>
+	</tr>
   </table>
   
 

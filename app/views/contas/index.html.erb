@@ -5,6 +5,7 @@
 	<th>Nome</th>
 	<th>Descrição</th>
 	<th>Tipo Conta</th>
+	<th>Valor Inicial</th>
   </tr>
 
 <% @contas.each do |conta| %>
@@ -12,6 +13,7 @@
 	<td><%= conta.nome%></td>
 	<td><%= conta.descricao%></td>
 	<td><%= conta.tipo_conta.nome %></td>
+	<td><%= conta.valor_inicial %></td>
     <td><%= link_to 'Show', conta %></td>
     <td><%= link_to 'Edit', edit_conta_path(conta) %></td>
     <td><%= link_to 'Destroy', conta, :confirm => 'Are you sure?', :method => :delete %></td>

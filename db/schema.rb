@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100321000345) do
+ActiveRecord::Schema.define(:version => 20100321234203) do
 
   create_table "contas", :force => true do |t|
     t.string   "nome"
@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20100321000345) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "tipo_conta_id"
+    t.float    "valor_inicial"
   end
 
   create_table "lancamentos", :force => true do |t|

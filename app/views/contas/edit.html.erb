@@ -11,6 +11,15 @@
 		<td><%= f.label :descricao %></td>
 		<td><%= f.text_field :descricao %></td>
 	</tr>
+	<tr>
+		<td><%= f.label :tipo_conta %></td>
+		<td><%= select("conta", "tipo_conta_id", 
+		@tipo_contas.collect {|t| [ t.nome, t.id ] }, {:prompt => 'Selecione...'}) %></td>
+	</tr>
+	<tr>
+		<td><%= f.label :valor_inicial %></td>
+		<td><%= f.text_field :valor_inicial %></td>
+	</tr>
   </table>
   <p>
     <%= f.submit 'Atualizar' %>

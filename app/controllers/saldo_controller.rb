@@ -1,18 +1,34 @@
 class SaldoController < ApplicationController
   def atual
-    #Lancamento.find_by_conta_id_and_data_and_credito_debito(
-    #:conta_id => params[:id], :data => Date.new, :credito_debito => "c")
-    hoje = DateTime.now
-    credito = Lancamento.sum :valor, :conditions => {:conta_id => params[:id], :data => Date.new(hoje.year, hoje.month, hoje.day), :credito_debito => 'c'}
-    debito  = Lancamento.sum :valor, :conditions => {:conta_id => params[:id], :data => Date.new(hoje.year, hoje.month, hoje.day), :credito_debito => 'd'}
+    if params[:ano] and params[:mes] and params[:dia]
+      ano, mes, dia = params[:ano].to_i, params[:mes].to_i, params[:dia].to_i
+      data_saldo = Date.new ano, mes, dia
+    else
+      aux = DateTime.now
+      data_saldo =  Date.new(aux.year, aux.month, aux.day)
+    end
     
-    @saldo = credito - debito
+    credito = Lancamento.sum :valor, :conditions => 
+    ["conta_id = ? AND data <= ? AND credito_debito = ?", 
+      params[:id], 
+      data_saldo, 
+      'c']
+    
+    debito  = Lancamento.sum :valor, :conditions => 
+      ["conta_id = ? AND data <= ? AND credito_debito = ?", 
+        params[:id], 
+        data_saldo, 
+        'd']
+    
     @conta = Conta.find_by_id(params[:id])
+    @saldo = @conta.valor_inicial + (credito - debito)
     
     respond_to do |format|
       format.html 
     end
-    
   end
-
+  
+  def data_saldo params
+  
+  end
 end
