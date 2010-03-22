@@ -2283,3 +2283,30 @@ Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:54:37) [GET]
   [4;36;1mConta Load (0.4ms)[0m   [0;1mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
 Rendering saldo/atual
 Completed in 18ms (View: 1, DB: 5) | 200 OK [http://localhost/saldo/2/2010/3/22]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:56:22) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"22"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/saldo_controller.rb:6:in `data_saldo'
+  app/controllers/saldo_controller.rb:6:in `atual'
+
+Rendered rescues/_trace (105.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SaldoController#atual (for 127.0.0.1 at 2010-03-21 23:57:00) [GET]
+  Parameters: {"ano"=>"2010", "mes"=>"3", "id"=>"2", "dia"=>"22"}
+  [4;35;1mLancamento Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lancamentos`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (conta_id = '2' AND data <= '2010-03-22' AND credito_debito = 'c') [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT sum(`lancamentos`.valor) AS sum_valor FROM `lancamentos` WHERE (conta_id = '2' AND data <= '2010-03-22' AND credito_debito = 'd') [0m
+  [4;36;1mConta Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `contas`[0m
+  [4;35;1mConta Load (0.3ms)[0m   [0mSELECT * FROM `contas` WHERE (`contas`.`id` = '2') LIMIT 1[0m
+Rendering saldo/atual
+Completed in 17ms (View: 1, DB: 4) | 200 OK [http://localhost/saldo/2/2010/3/22]
