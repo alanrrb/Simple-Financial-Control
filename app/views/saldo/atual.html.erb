@@ -1,7 +1,7 @@
 <h1>Saldo da conta <%= @conta.descricao %></h1>
 
 <p>
-Saldo Atual: <%= @saldo%>
+Saldo Atual: <%= @conta.saldo(@data_saldo)%> 
 </p>
 <p>
 <%= link_to 'Voltar para contas', contas_path %>
