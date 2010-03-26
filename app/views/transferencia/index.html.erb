@@ -1,0 +1,25 @@
+<h1>Transfer&ecirc;ncia</h1>
+
+<% form_tag 'transferencia/confirmar', :method => "put" do %>
+<p>
+Da conta: <%= @conta_de.nome%>
+</p>
+
+<p>
+Para conta: <%= @conta_para.nome%>  
+</p>
+
+<p>
+Valor: <%= text_field_tag :valor %>
+</p>
+
+<p>
+Descri&ccedil;&atilde;o
+<%= text_area_tag :descricao%>
+</p>
+<%= submit_tag 'Confirmar' %>
+
+
+<%= hidden_field_tag 'conta_de', @conta_de.id%>
+<%= hidden_field_tag 'conta_para', @conta_para.id%>
+<%end%>

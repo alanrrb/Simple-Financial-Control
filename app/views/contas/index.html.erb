@@ -3,26 +3,34 @@
 <table>
   <tr>
 	<th>Nome</th>
-	<th>Descrição</th>
+	<th>Descricoes</th>
 	<th>Tipo Conta</th>
 	<th>Valor Inicial</th>
-	<th>Data de Cadastro</th>
+	<th>Saldo Atual</th>
+	<th colspan="4">Opcoes</th>
+	<th colspan="2">Transferencias</th>
   </tr>
-
+<% form_tag "/transferencia", :method => "post" do %>
 <% @contas.each do |conta| %>
   <tr>
 	<td><%= conta.nome%></td>
 	<td><%= conta.descricao%></td>
 	<td><%= conta.tipo_conta.nome %></td>
 	<td><%= conta.valor_inicial %></td>
-	<td><%= conta.created_at.strftime("%d/%m/%Y %H:%M") %></td>
+	<td><%= conta.saldo %></td>
     <td><%= link_to 'Mostrar', conta %></td>
     <td><%= link_to 'Editar', edit_conta_path(conta) %></td>
     <td><%= link_to 'Apagar', conta, :confirm => 'Are you sure?', :method => :delete %></td>
-<td><%= link_to 'Saldo Atual', "../saldo/#{conta.id}"%></td>
+	<td><%= link_to 'Lancamentos', "contas/lancamentos/#{conta.id}" %>
+	<td><%= radio_button_tag :conta_de, conta.id%></td>
+	<td><%= radio_button_tag :conta_para, conta.id%></td>
   </tr>
 <% end %>
+
 </table>
+
+<%= submit_tag "Transferir" %>
+<% end %>
 
 <br />
 

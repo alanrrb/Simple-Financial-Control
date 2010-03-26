@@ -9,10 +9,16 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :contas
   
-  map.connect 'saldo/:id', :controller => 'saldo', :action => 'atual'
+  map.connect 'saldo/:id',                                :controller => 'saldo',         :action => 'atual'
   
-  map.connect 'saldo/:id/:ano/:mes/:dia', :controller => 'saldo', :action => 'atual'
+  map.connect 'saldo/:id/:ano/:mes/:dia',                 :controller => 'saldo',         :action => 'atual'
 
+  map.connect 'transferencia', 				                    :controller => 'transferencia', :action => 'index'
+  
+  map.connect 'contas/lancamentos/:id',                   :controller => 'contas',        :action => 'lancamentos'
+  
+  map.connect 'contas/lancamentos/:id/:ano/:mes/:dia',    :controller => 'contas',        :action => 'lancamentos'
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
