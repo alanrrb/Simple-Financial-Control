@@ -25,7 +25,10 @@ class LancamentosController < ApplicationController
   # GET /lancamentos/new.xml
   def new
     @lancamento = Lancamento.new
-
+    
+    conta = Conta.find_by_id(params[:conta_id]) if params[:conta_id]
+    @lancamento.conta = conta
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @lancamento }

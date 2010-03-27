@@ -11,12 +11,12 @@ class TransferenciaController < ApplicationController
   def confirmar
     tipo_lancamento = TipoLancamento.find_by_nome("transferencia")
     dados_lancamento = {
-    :valor				=> params[:valor], 
-    :data 				=> Date.today, 
-    :descricao 			=> params[:descricao], 
-    :tipo_lancamento_id => tipo_lancamento.id, 
-    :conta_id 			=> params[:conta_de], 
-    :credito_debito 	=> 'd' }
+      :valor				=> params[:valor], 
+      :data 				=> Date.today, 
+      :descricao 			=> params[:descricao], 
+      :tipo_lancamento_id => tipo_lancamento.id, 
+      :conta_id 			=> params[:conta_de], 
+      :credito_debito 	=> 'd' }
 
     #de
     Lancamento.create! dados_lancamento

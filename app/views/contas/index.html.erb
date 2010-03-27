@@ -1,14 +1,23 @@
 <h1>Listar contas</h1>
 
-<table>
+<table cellspacing="5">
   <tr>
 	<th>Nome</th>
 	<th>Descricoes</th>
 	<th>Tipo Conta</th>
 	<th>Valor Inicial</th>
 	<th>Saldo Atual</th>
-	<th colspan="4">Opcoes</th>
+	<th colspan="3">Opcoes</th>
+	<th colspan="2">Lancamento</th>
 	<th colspan="2">Transferencias</th>
+  </tr>
+  <tr>
+  	<th colspan="5"></th>
+	<th colspan="3"></th>
+	<th>Todos</th>
+	<th>Novo</th>
+	<th>De</th>
+	<th>Para</th>
   </tr>
 <% form_tag "/transferencia", :method => "post" do %>
 <% @contas.each do |conta| %>
@@ -21,15 +30,17 @@
     <td><%= link_to 'Mostrar', conta %></td>
     <td><%= link_to 'Editar', edit_conta_path(conta) %></td>
     <td><%= link_to 'Apagar', conta, :confirm => 'Are you sure?', :method => :delete %></td>
-	<td><%= link_to 'Lancamentos', "contas/lancamentos/#{conta.id}" %>
-	<td><%= radio_button_tag :conta_de, conta.id%></td>
-	<td><%= radio_button_tag :conta_para, conta.id%></td>
+	<td><%= link_to 'Lancamentos', "contas/lancamentos/#{conta.id}" %></td>
+	<td><%= link_to 'Novo', :controller => 'lancamentos', :action => 'new', :conta_id => conta.id %></td>
+	<td align="center"><%= radio_button_tag :conta_de, conta.id%></td>
+	<td align="center"><%= radio_button_tag :conta_para, conta.id%></td>
   </tr>
 <% end %>
 
 </table>
-
+<p>
 <%= submit_tag "Transferir" %>
+</p>
 <% end %>
 
 <br />
