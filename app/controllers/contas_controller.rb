@@ -1,4 +1,6 @@
 class ContasController < ApplicationController
+  layout "sfc"
+  
   # GET /contas
   # GET /contas.xml
   def index
@@ -92,5 +94,9 @@ class ContasController < ApplicationController
     else
       @lancamentos = @conta.lancamentos
     end
+    respond_to do |format|
+      format.js
+    end
+    
   end
 end

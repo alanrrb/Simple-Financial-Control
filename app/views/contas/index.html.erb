@@ -1,5 +1,10 @@
 <h1>Listar contas</h1>
 
+
+<div id="lancamentos">
+	render(:partial => "lancamentos", :object => @lancamentos)
+</div>
+
 <table cellspacing="5">
   <tr>
 	<th>Nome</th>
@@ -30,7 +35,7 @@
     <td><%= link_to 'Mostrar', conta %></td>
     <td><%= link_to 'Editar', edit_conta_path(conta) %></td>
     <td><%= link_to 'Apagar', conta, :confirm => 'Are you sure?', :method => :delete %></td>
-	<td><%= link_to 'Lancamentos', "contas/lancamentos/#{conta.id}" %></td>
+	<td><%= link_to_remote 'Lancamentos', :url => {:action => "lancamentos", :id => conta.id} %></td>
 	<td><%= link_to 'Novo', :controller => 'lancamentos', :action => 'new', :conta_id => conta.id %></td>
 	<td align="center"><%= radio_button_tag :conta_de, conta.id%></td>
 	<td align="center"><%= radio_button_tag :conta_para, conta.id%></td>
