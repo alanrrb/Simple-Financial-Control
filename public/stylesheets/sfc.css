@@ -1,0 +1,9 @@
+#lancamentos {
+	border: 2px solid black;
+	width:800px;
+	height:300px;
+	overflow:scroll;
+	
+	position:fixed;
+	background-color: white;
+}

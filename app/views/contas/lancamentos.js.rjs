@@ -1,0 +1,2 @@
+page.replace_html("lancamentos", :partial => "lancamentos", :object => @lancamentos)
+page[:lancamentos].visual_effect :grow if @lancamentos
