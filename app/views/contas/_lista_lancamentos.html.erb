@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th>Valor</th>
+    <th>Data</th>
+    <th>Descricao</th>
+    <th>Tipo lancamento</th>
+    <th>Conta</th>
+    <th>Origem</th>
+  </tr>
+
+<% @lancamentos.each do |lancamento| %>
+  <tr>
+    <td><%=h lancamento.valor %></td>
+    <td><%=h lancamento.data %></td>
+    <td><%=h lancamento.descricao %></td>
+    <td><%=h lancamento.tipo_lancamento.nome %></td>
+    <td><%=h lancamento.conta.nome %></td>
+    <td><%=h lancamento.credito_debito_desc %></td>
+    <td><%= link_to_remote 'Mostrar', :url => lancamento_url(:id => lancamento), :method => :get %></td>
+    <td><%= link_to 'Editar', edit_lancamento_path(lancamento) %></td>
+    <td><%= link_to 'Apagar', lancamento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

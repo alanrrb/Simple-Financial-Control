@@ -1,0 +1,3 @@
+<%= render(:partial => "details")%>
+
+<%= link_to_remote 'Lancamentos', :url => {:controller => "contas", :action => "lancamentos", :id => @lancamento.conta.id} %>

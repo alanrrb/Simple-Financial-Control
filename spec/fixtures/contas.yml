@@ -1,0 +1,11 @@
+conta_valida:
+    nome: Itau
+    descricao: conta corrente do Itau
+    valor_inicial: 1000
+    tipo_conta: conta_corrente
+    
+conta_sem_valor_inicial:
+    nome: Itau invalido
+    descricao: conta corrente do Itau
+    tipo_conta: conta_corrente
+    

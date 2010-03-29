@@ -16,14 +16,14 @@ class TransferenciaController < ApplicationController
       :descricao 			=> params[:descricao], 
       :tipo_lancamento_id => tipo_lancamento.id, 
       :conta_id 			=> params[:conta_de], 
-      :credito_debito 	=> 'd' }
+      :credito_debito 	=> 'd' 
+      }
 
     #de
     Lancamento.create! dados_lancamento
 
     #para
-    dados_lancamento[:conta_id] 		= params[:conta_para]
-    dados_lancamento[:credito_debito] 	= 'c'
+    dados_lancamento.merge(:conta_id => params[:conta_para], :credito_debito => 'c')
     Lancamento.create! dados_lancamento
 
     redirect_to(:controller => "contas", :action => "index")

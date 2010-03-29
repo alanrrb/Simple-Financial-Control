@@ -14,8 +14,8 @@ class LancamentosController < ApplicationController
   # GET /lancamentos/1.xml
   def show
     @lancamento = Lancamento.find(params[:id])
-
     respond_to do |format|
+      format.js
       format.html # show.html.erb
       format.xml  { render :xml => @lancamento }
     end
@@ -47,7 +47,7 @@ class LancamentosController < ApplicationController
 
     respond_to do |format|
       if @lancamento.save
-        flash[:notice] = 'Lancamento was successfully created.'
+        flash[:notice] = 'Lancamento foi criado com sucesso!'
         format.html { redirect_to(@lancamento) }
         format.xml  { render :xml => @lancamento, :status => :created, :location => @lancamento }
       else
@@ -64,7 +64,7 @@ class LancamentosController < ApplicationController
 
     respond_to do |format|
       if @lancamento.update_attributes(params[:lancamento])
-        flash[:notice] = 'Lancamento was successfully updated.'
+        flash[:notice] = 'Lancamento foi criado com sucesso!'
         format.html { redirect_to(@lancamento) }
         format.xml  { head :ok }
       else

@@ -29,8 +29,7 @@ describe Lancamento do
   end
   
   it "deveria validar a ausencia da origem do lancamento (credito/debito)" do
-    lancamento = lancamento_valido_credito
-    lancamento[:credito_debito]= nil
+    lancamento = lancamento_valido_credito.merge(:credito_debito => nil)
     @lancamento = Lancamento.create(lancamento)
     @lancamento.should_not be_valid
   end
@@ -40,5 +39,15 @@ describe Lancamento do
     lancamento[:conta]= nil
     @lancamento = Lancamento.create(lancamento)
     @lancamento.should_not be_valid
+  end
+  
+  it "deveria descrever credito_debito 'c' como 'crédito' e 'd' como 'débito'" do
+    lancamento = lancamento_valido_credito
+    @lancamento = Lancamento.create(lancamento)
+    @lancamento.credito_debito_desc.should == 'crédito'
+    
+    lancamento = lancamento_valido_debito
+    @lancamento = Lancamento.create(lancamento)
+    @lancamento.credito_debito_desc.should == 'débito'
   end
 end
