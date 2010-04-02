@@ -19,6 +19,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.connect 'contas/lancamentos/:id/:ano/:mes/:dia',    :controller => 'contas',        :action => 'lancamentos'
   
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
