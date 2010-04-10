@@ -16,6 +16,14 @@ Dir[File.dirname(__FILE__) + "/spec_helpers/**/*.rb"].each do |file|
   require file
 end
 
+require 'capybara'
+require 'capybara/dsl'
+
+include Capybara
+Capybara.default_driver = :selenium
+
+
+
 Spec::Runner.configure do |config|
   # If you're not using ActiveRecord you should remove these
   # lines, delete config/database.yml and disable :active_record
