@@ -28,17 +28,17 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-controllers-contas_controller_rb.html">app/controllers/contas_controller.rb</a></td>
-            <td class='right_align'><tt>103</tt></td>
-            <td class='right_align'><tt>75</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>30.10%</tt></div>
+            <td class='right_align'><tt>106</tt></td>
+            <td class='right_align'><tt>78</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>65.09%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:30px"></div>
-            <div class="uncovered" style="width:70px"></div>
+            <div class="covered" style="width:65px"></div>
+            <div class="uncovered" style="width:35px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>13.33%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>56.41%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:13px"></div>
-            <div class="uncovered" style="width:87px"></div>
+            <div class="covered" style="width:56px"></div>
+            <div class="uncovered" style="width:44px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -92,43 +92,43 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line7">7</a>     @contas = Conta.all</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line8">8</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line9">9</a>     respond_to do |format|</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line10">10</a>       format.html # index.html.erb</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line11">11</a>       format.xml  { render :xml =&gt; @contas }</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line12">12</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line13">13</a>   end</pre></td>
           </tr>
         
@@ -158,43 +158,43 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line18">18</a>     @conta = Conta.find(params[:id])</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line19">19</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line20">20</a>     respond_to do |format|</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line21">21</a>       format.html # show.html.erb</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line22">22</a>       format.xml  { render :xml =&gt; @conta }</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line23">23</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line24">24</a>   end</pre></td>
           </tr>
         
@@ -224,49 +224,49 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line29">29</a>     @conta = Conta.new</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line30">30</a>     @tipo_contas = TipoConta.find(:all)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line31">31</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line32">32</a>     respond_to do |format|</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line33">33</a>       format.html # new.html.erb</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line34">34</a>       format.xml  { render :xml =&gt; @conta }</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line35">35</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line36">36</a>   end</pre></td>
           </tr>
         
@@ -290,19 +290,19 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line40">40</a>     @tipo_contas = TipoConta.find(:all)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line41">41</a>     @conta = Conta.find(params[:id])</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line42">42</a>   end</pre></td>
           </tr>
         
@@ -332,79 +332,79 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line47">47</a>     @conta = Conta.new(params[:conta])</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line48">48</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line49">49</a>     respond_to do |format|</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line50">50</a>       if @conta.save</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
-            <td><pre><a name="line51">51</a>         flash[:notice] = &quot;Conta #{@conta.nome} foi criado com sucesso!.&quot;</pre></td>
+          <tr class="marked">
+            <td><pre><a name="line51">51</a>         flash[:notice] = &quot;Conta #{@conta.nome} foi criado com sucesso!&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
-            <td><pre><a name="line52">52</a>         format.html { redirect_to(@conta) }</pre></td>
+          <tr class="marked">
+            <td><pre><a name="line52">52</a>         format.html { redirect_to(contas_path) }</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line53">53</a>         format.xml  { render :xml =&gt; @conta, :status =&gt; :created, :location =&gt; @conta }</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line54">54</a>       else</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line55">55</a>         format.html { render :action =&gt; &quot;new&quot; }</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line56">56</a>         format.xml  { render :xml =&gt; @conta.errors, :status =&gt; :unprocessable_entity }</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line57">57</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line58">58</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line59">59</a>   end</pre></td>
           </tr>
         
@@ -459,7 +459,7 @@
           
           
           <tr class="uncovered">
-            <td><pre><a name="line68">68</a>         flash[:notice] = &quot;Conta #{@conta.nome} foi atualizado com sucesso!.&quot;</pre></td>
+            <td><pre><a name="line68">68</a>         flash[:notice] = &quot;Conta #{@conta.nome} foi atualizado com sucesso!&quot;</pre></td>
           </tr>
         
           
@@ -609,73 +609,91 @@
           
           
           <tr class="uncovered">
-            <td><pre><a name="line93">93</a>       @lancamentos = @conta.lancamentos.find_by_data Date.new params[:ano].to_i, params[:mes].to_i, params[:dia].to_i</pre></td>
+            <td><pre><a name="line93">93</a>       @lancamentos = @conta.lancamentos.find(</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line94">94</a>     else</pre></td>
+            <td><pre><a name="line94">94</a>         :all, </pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line95">95</a>       @lancamentos = @conta.lancamentos</pre></td>
+            <td><pre><a name="line95">95</a>         :conditions =&gt; [&quot;data = ?&quot;, Date.new(params[:ano].to_i, params[:mes].to_i, params[:dia].to_i)]</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line96">96</a>     end</pre></td>
+            <td><pre><a name="line96">96</a>       )</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line97">97</a>     respond_to do |format|</pre></td>
+            <td><pre><a name="line97">97</a>     else</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line98">98</a>       format.js</pre></td>
+            <td><pre><a name="line98">98</a>       @lancamentos = @conta.lancamentos</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line99">99</a>       format.html</pre></td>
+            <td><pre><a name="line99">99</a>     end</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line100">100</a>     end</pre></td>
+            <td><pre><a name="line100">100</a>     respond_to do |format|</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line101">101</a>     </pre></td>
+            <td><pre><a name="line101">101</a>       format.js</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line102">102</a>   end</pre></td>
+            <td><pre><a name="line102">102</a>       format.html</pre></td>
           </tr>
         
           
           
           <tr class="uncovered">
-            <td><pre><a name="line103">103</a> end</pre></td>
+            <td><pre><a name="line103">103</a>     end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line104">104</a>     </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line105">105</a>   end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="uncovered">
+            <td><pre><a name="line106">106</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Sun Mar 28 21:57:28 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.8</a></p>
+    <p>Generated on Sun Apr 11 04:01:10 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.8</a></p>
 
   </body>
 </html>

@@ -49,7 +49,7 @@ class ContasController < ApplicationController
     respond_to do |format|
       if @conta.save
         flash[:notice] = "Conta #{@conta.nome} foi criado com sucesso!"
-        format.html { redirect_to(@conta) }
+        format.html { redirect_to(contas_path) }
         format.xml  { render :xml => @conta, :status => :created, :location => @conta }
       else
         format.html { render :action => "new" }
