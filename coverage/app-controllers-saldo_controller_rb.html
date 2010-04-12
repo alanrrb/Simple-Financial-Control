@@ -30,15 +30,15 @@
             <td class="left_align"><a href="app-controllers-saldo_controller_rb.html">app/controllers/saldo_controller.rb</a></td>
             <td class='right_align'><tt>18</tt></td>
             <td class='right_align'><tt>17</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>27.78%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:28px"></div>
-            <div class="uncovered" style="width:72px"></div>
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>23.53%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:24px"></div>
-            <div class="uncovered" style="width:76px"></div>
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -63,42 +63,42 @@
           
           
           <tr class="marked">
-            <td><pre><a name="line2">2</a>   def atual    </pre></td>
+            <td><pre><a name="line2">2</a>   def index    </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line3">3</a>     @conta = Conta.find_by_id(params[:id])</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line4">4</a>     @data_saldo = data_saldo</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line5">5</a>     respond_to do |format|</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line6">6</a>       format.html </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line7">7</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line8">8</a>   end</pre></td>
           </tr>
         
@@ -122,50 +122,50 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line12">12</a>     if params[:ano] and params[:mes] and params[:dia]</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line13">13</a>       Date.new params[:ano].to_i, params[:mes].to_i, params[:dia].to_i</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line14">14</a>     else</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line15">15</a>       Date.today</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line16">16</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line17">17</a>   end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line18">18</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Sun Apr 11 04:01:10 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.8</a></p>
+    <p>Generated on Sun Apr 11 22:58:28 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.8</a></p>
 
   </body>
 </html>

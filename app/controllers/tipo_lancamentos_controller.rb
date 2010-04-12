@@ -45,7 +45,7 @@ class TipoLancamentosController < ApplicationController
     respond_to do |format|
       if @tipo_lancamento.save
         flash[:notice] = 'TipoLancamento was successfully created.'
-        format.html { redirect_to(@tipo_lancamento) }
+        format.html { redirect_to(tipo_lancamentos_path) }
         format.xml  { render :xml => @tipo_lancamento, :status => :created, :location => @tipo_lancamento }
       else
         format.html { render :action => "new" }

@@ -9,9 +9,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :contas
   
-  map.connect 'saldo/:id',                                :controller => 'saldo',         :action => 'atual'
+  map.connect 'saldo/:id',                                :controller => 'saldo',         :action => 'index'
   
-  map.connect 'saldo/:id/:ano/:mes/:dia',                 :controller => 'saldo',         :action => 'atual'
+  map.connect 'saldo/:id/:ano/:mes/:dia',                 :controller => 'saldo',         :action => 'index'
 
   map.connect 'transferencia', 				                    :controller => 'transferencia', :action => 'index'
   

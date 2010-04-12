@@ -30,15 +30,15 @@
             <td class="left_align"><a href="app-controllers-transferencia_controller_rb.html">app/controllers/transferencia_controller.rb</a></td>
             <td class='right_align'><tt>32</tt></td>
             <td class='right_align'><tt>24</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>12.50%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:13px"></div>
-            <div class="uncovered" style="width:87px"></div>
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>12.50%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:13px"></div>
-            <div class="uncovered" style="width:87px"></div>
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -68,43 +68,43 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line3">3</a> 	  @conta_de   = Conta.find(params[:conta_de])</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line4">4</a> 	  @conta_para = Conta.find(params[:conta_para])</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line5">5</a> 	</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line6">6</a> 	  respond_to do |format|</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line7">7</a>       format.html</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line8">8</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line9">9</a>   end</pre></td>
           </tr>
         
@@ -122,134 +122,134 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line12">12</a>     tipo_lancamento = TipoLancamento.find_by_nome(&quot;transferencia&quot;)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line13">13</a>     dados_lancamento = {</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line14">14</a>       :valor              =&gt; params[:valor], </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line15">15</a>       :data               =&gt; Date.today, </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line16">16</a>       :descricao          =&gt; params[:descricao], </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line17">17</a>       :tipo_lancamento_id =&gt; tipo_lancamento.id, </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line18">18</a>       :conta_id           =&gt; params[:conta_de], </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line19">19</a>       :credito_debito     =&gt; 'd' </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line20">20</a>     }</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line21">21</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line22">22</a>     #de</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line23">23</a>     Lancamento.create! dados_lancamento</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line24">24</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line25">25</a>     #para</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line26">26</a>     dados_lancamento.merge(:conta_id =&gt; params[:conta_para], :credito_debito =&gt; 'c')</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line27">27</a>     Lancamento.create! dados_lancamento</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line28">28</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line29">29</a>     redirect_to(:controller =&gt; &quot;contas&quot;, :action =&gt; &quot;index&quot;)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line30">30</a>   end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line31">31</a>   </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line32">32</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Sun Apr 11 04:01:10 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.8</a></p>
+    <p>Generated on Sun Apr 11 22:58:28 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.8</a></p>
 
   </body>
 </html>

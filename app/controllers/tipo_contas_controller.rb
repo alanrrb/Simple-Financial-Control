@@ -45,7 +45,7 @@ class TipoContasController < ApplicationController
     respond_to do |format|
       if @tipo_conta.save
         flash[:notice] = 'TipoConta was successfully created.'
-        format.html { redirect_to(@tipo_conta) }
+        format.html { redirect_to(tipo_contas_path) }
         format.xml  { render :xml => @tipo_conta, :status => :created, :location => @tipo_conta }
       else
         format.html { render :action => "new" }
