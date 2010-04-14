@@ -2,7 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe "Tipo de contas" do
   before(:all) do
-    visit("http://localhost:3000/tipo_contas")
+    visit("/tipo_contas")
   end
   
   after(:all) do 
@@ -30,7 +30,6 @@ describe "Tipo de contas" do
   end
   
   it "deveria apos cadastrar um novo tipo conta, mostra-la na lista de tipo de contas" do
-    click_link("Back")
     page.should have_content("Conta Corrente")
   end
   
