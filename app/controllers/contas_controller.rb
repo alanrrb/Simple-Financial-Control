@@ -90,7 +90,7 @@ class ContasController < ApplicationController
   def lancamentos
     @conta = Conta.find(params[:id])
     if params[:ano] and params[:mes] and params[:dia]
-      @lancamentos = @conta.lancamentos.find(
+	  @lancamentos = @conta.lancamentos.find(
         :all, 
         :conditions => ["data = ?", Date.new(params[:ano].to_i, params[:mes].to_i, params[:dia].to_i)]
       )

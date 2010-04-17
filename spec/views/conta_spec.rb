@@ -2,9 +2,9 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe "Cadastro de contas" do
   
-  before (:all) do
+  before(:all) do
     TipoConta.create! :nome => "Conta Corrente", :descricao => "uma conta corrente"
-    visit("http://localhost:3000/contas")
+    visit("/contas")
   end
   
   after(:all) do 
@@ -22,7 +22,7 @@ describe "Cadastro de contas" do
 
   it "deveria ser capaz de apos inserir os dados de uma nova conta, cadastra-la" do
     fill_in "conta_nome", :with => "Qualquer"
-    fill_in "conta_descricao", :with => "Qualquer"
+    fill_in "conta_descricao", :with => "uma conta corrente"
     locate("//select[@id='conta_tipo_conta_id']").select("Conta Corrente")
     fill_in "conta_valor_inicial", :with => "1000"
     click "conta_submit"
@@ -30,6 +30,8 @@ describe "Cadastro de contas" do
 
   it "deveria ser capaz de listar as contas e mostrar a conta previamente cadastrada" do
     page.should have_content("Qualquer")
+	page.should have_content("uma conta corrente")
+	page.should have_content("1000")
   end
 
 end

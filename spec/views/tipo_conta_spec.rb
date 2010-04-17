@@ -2,7 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe "Tipo de contas" do
   before(:all) do
-    visit("http://localhost:3000/tipo_contas")
+    visit("/tipo_contas")
   end
   
   after(:all) do 
@@ -18,7 +18,7 @@ describe "Tipo de contas" do
   end
   
   it "deveria ser capaz de cadastrar um tipo de conta" do
-    nome_tipo_conta = "Conta Corrente"
+    nome_tipo_conta = "Conta Corrente Teste"
     descricao_tipo_conta = "uma conta corrente de teste"
     
     fill_in "tipo_conta_nome", :with => nome_tipo_conta
@@ -30,11 +30,20 @@ describe "Tipo de contas" do
   end
   
   it "deveria apos cadastrar um novo tipo conta, mostra-la na lista de tipo de contas" do
-    click_link("Back")
     page.should have_content("Conta Corrente")
   end
   
   it "deveria ser capaz de editar uma conta corrente" do
-    
+    nome_tipo_conta = "Conta Corrente Editada"
+    descricao_tipo_conta = "uma conta corrente de teste Editada"
+	click_link("Edit")
+	
+	fill_in "tipo_conta_nome", :with => nome_tipo_conta
+    fill_in "tipo_conta_descricao", :with => descricao_tipo_conta
+    click "tipo_conta_submit"
+    page.should have_content(nome_tipo_conta)
+    page.should have_content(descricao_tipo_conta)
+    page.should_not have_content("error")
+	
   end
 end
