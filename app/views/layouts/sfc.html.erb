@@ -14,9 +14,11 @@
 	<%= link_to "Contas", contas_path %>
 </div>
 
-<p style="color: green"><%= flash[:notice] %></p>
 
-<%= yield %>
+<div id="div_principal">
+    <p style="color: green"><%= flash[:notice] %></p>
+	<%= yield %>
+</div>
 
 </body>
 </html>

@@ -1,4 +1,5 @@
 class TipoContasController < ApplicationController
+  layout "sfc"
   # GET /tipo_contas
   # GET /tipo_contas.xml
   def index
@@ -62,7 +63,7 @@ class TipoContasController < ApplicationController
     respond_to do |format|
       if @tipo_conta.update_attributes(params[:tipo_conta])
         flash[:notice] = 'TipoConta was successfully updated.'
-        format.html { redirect_to(@tipo_conta) }
+        format.html { redirect_to(tipo_contas_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

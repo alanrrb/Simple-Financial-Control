@@ -46,4 +46,10 @@ describe "Tipo de contas" do
     page.should_not have_content("error")
 	
   end
+  
+  it "deveria ser capaz de excluir um tipo conta" do 
+	click "Destroy"
+	
+	page.should_not have_content("Conta Corrente Editada")
+  end
 end
