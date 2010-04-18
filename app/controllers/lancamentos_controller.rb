@@ -1,4 +1,5 @@
 class LancamentosController < ApplicationController
+  layout "sfc"
   # GET /lancamentos
   # GET /lancamentos.xml
   def index

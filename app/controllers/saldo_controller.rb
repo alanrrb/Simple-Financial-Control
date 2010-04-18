@@ -1,4 +1,6 @@
 class SaldoController < ApplicationController
+  layout "sfc"
+  
   def index    
     @conta = Conta.find_by_id(params[:id])
     @data_saldo = data_saldo

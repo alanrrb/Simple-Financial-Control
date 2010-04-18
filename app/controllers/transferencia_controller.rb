@@ -1,4 +1,6 @@
 class TransferenciaController < ApplicationController
+  layout "sfc"
+  
   def index
 	  @conta_de   = Conta.find(params[:conta_de])
 	  @conta_para = Conta.find(params[:conta_para])

@@ -1,4 +1,5 @@
 class TipoLancamentosController < ApplicationController
+  layout "sfc"
   # GET /tipo_lancamentos
   # GET /tipo_lancamentos.xml
   def index
