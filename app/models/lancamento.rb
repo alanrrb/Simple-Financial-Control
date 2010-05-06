@@ -7,9 +7,9 @@ class Lancamento < ActiveRecord::Base
   
   def credito_debito_desc
     if credito_debito == 'c'
-      'crédito'
+      'credito'
     else
-      'débito'
+      'debito'
     end
   end
 end
